@@ -27,3 +27,6 @@ WORKDIR /opt/isONclust2/build
 # Run cmake and make
 RUN cmake .. 
 RUN make -j 4
+
+# add the binary to the PATH
+ENV PATH="/opt/isONclust2/build/bin:${PATH}"
